@@ -1,5 +1,6 @@
 name: Backend Continuous Deployment
 on: 
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -29,6 +30,7 @@ jobs:
           role-to-assume: ${{vars.AWS_ASSUME_ROLE_ARN}}
 
       - name: Login to Amazon ECR
+        id: login-ecr
         uses: aws-actions/amazon-ecr-login@v2
 
       - name: Build, tag, and push docker image to Amazon ECR
