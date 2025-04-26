@@ -4,8 +4,7 @@ import os
 
 app = FastAPI()
 
-# Leitura de variáveis do ConfigMap e Secret
-GREETING_MESSAGE = os.getenv("GREETING_MESSAGE", "studying")
+GREETING_MESSAGE = os.getenv("GREETING_MESSAGE", "validating")
 SECRET_VALUE = os.getenv("MY_SECRET", "default_secret")
 
 @app.get("/")
