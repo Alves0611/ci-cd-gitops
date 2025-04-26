@@ -33,7 +33,7 @@ variable "iam_config" {
     policy_name = string
   })
   default = {
-    role_name   = "StudyingActionsRole"
+    role_name   = "StudyingGitHubActionsRole"
     policy_name = "StudyingGitHubActionsPolicy"
   }
 }
