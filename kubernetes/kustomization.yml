@@ -1,8 +1,10 @@
 resources:
-  - backend/deployment.yml
-  - backend/service.yml
+- backend/deployment.yml
+- backend/service.yml
 
 images:
-  - name: 165304687371.dkr.ecr.us-east-1.amazonaws.com/studying/dev/backend
-    newTag: latest
+- name: 165304687371.dkr.ecr.us-east-1.amazonaws.com/studying/dev/backend
+  newName: 165304687371.dkr.ecr.us-east-1.amazonaws.com/studying/dev/backend
+  newTag: 49825bd8da4f8d9213e4d6f7ec61f7b37b662edc
 kind: Kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
