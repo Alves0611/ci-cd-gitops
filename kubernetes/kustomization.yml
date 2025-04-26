@@ -1,0 +1,8 @@
+resources:
+  - backend/deployment.yml
+  - backend/service.yml
+
+images:
+  - name: 165304687371.dkr.ecr.us-east-1.amazonaws.com/studying/dev/backend
+    newTag: latest
+kind: Kustomization
