@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: poc-python-service
+  annotations:
+    service.kubernetes.io/topology-mode: auto
+  labels:
+    app: poc-python
+spec:
+  type: ClusterIP
+  selector:
+    app: poc-python
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: poc-python
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: poc-python
+  template:
+    metadata:
+      labels:
+        app: poc-python
+    spec:
+      containers:
+        - name: poc-python
+          image: 165304687371.dkr.ecr.us-east-1.amazonaws.com/studying/dev/backend:latest
+          ports:
+            - containerPort: 80
