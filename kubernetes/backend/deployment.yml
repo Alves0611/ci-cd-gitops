@@ -16,4 +16,4 @@ spec:
         - name: poc-python
           image: 165304687371.dkr.ecr.us-east-1.amazonaws.com/studying/dev/backend:latest
           ports:
-            - containerPort: 80
+            - containerPort: 8080
