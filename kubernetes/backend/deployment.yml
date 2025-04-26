@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: poc-python
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: poc-python
