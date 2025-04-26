@@ -25,3 +25,15 @@ variable "ecr_repositories" {
     }
   ]
 }
+
+variable "iam_config" {
+  description = "Configuração de nomes para IAM Role e Policy"
+  type = object({
+    role_name   = string
+    policy_name = string
+  })
+  default = {
+    role_name   = "StudyingActionsRole"
+    policy_name = "StudyingGitHubActionsPolicy"
+  }
+}
